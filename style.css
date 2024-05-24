@@ -7,6 +7,8 @@
     font-family: "Poppins", sans-serif;
 }
 
+
+
 .header{
     position: fixed;
     top:0;
@@ -46,12 +48,12 @@
     margin-left: 2.5rem;
     transition: 0.2s ease;
 }
-
+/*
 .navbar a:hover{
    
    
 }
-
+*/
 
 #check {
     display: none;
@@ -78,6 +80,7 @@
 @media (max-width: 768px){
     .icons{
         display: inline-flex;
+        top: 6px;
     }
 
     #check:checked~.icons #menu-icon {
@@ -150,11 +153,6 @@
         font-size: 1rem;
 
     }
-    .contact-heading h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        white-space: normal;
-    }
 }
 
 .main-content {
@@ -205,8 +203,6 @@
 .centered {
     position: absolute;
     left: 50%;
-    
-    transform: translate(-50%, -50%);
     font-size: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -216,7 +212,6 @@
     color: #D2E48C;
     filter: contrast(1.75);
     font-weight: 700;
-    top: 250px;
 }
 
 .about {
@@ -244,19 +239,16 @@
     margin-top: 15px;
 }
 
-.story-image {
-    margin-left: 40px;
-}
-
 .story-image, .team-image {
     width: 300px;
     height: auto;
     border-radius: 3%;
+    margin-left: 40px;
     margin-bottom: 20px;
     filter: contrast(0.7);
 }
 
-.team-text {
+.team-text, .story-text {
     flex: 1;
     text-align: justify;
     filter: contrast(1.75);
@@ -266,27 +258,17 @@
     text-align: right;
 }
 
-.story-text {
-    flex: 1;
-    text-align: justify;
-    filter: contrast(1.75);
+.about-section h2{
+    color: #0C0C0C;
+    font-weight: 700;
+    letter-spacing: -1.3px;
+    font-size: 1.7rem;
 }
 
-  .about-section p {
+.about-section p {
     color: #0C0C0C; 
     font-weight: 450;
     letter-spacing: 0.6px;
-}
-
-.about-content h1, .about-section h2{
-color: #0C0C0C;
-  font-weight: 700;
-  letter-spacing: -1.3px;
-  font-size: 1.7rem;
-}
-
-.about-content h1 {
-    font-size: 24px;
 }
 
 .about-section ul {
@@ -297,10 +279,6 @@ color: #0C0C0C;
 
 .about-section p {
     line-height: 1.6;
-}
-
-.story-content:hover, .team-content:hover {
-    transform: scale(1.05);
 }
 
 .story-content, .team-content {
@@ -324,6 +302,25 @@ color: #0C0C0C;
     }
 }
 
+@media only screen and (max-width:1920px)
+{
+    .centered {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -20px);
+        font-size: 60px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 0 10px;
+        animation: fadeIn 1s ease-in-out;
+        letter-spacing: -1.7px;
+        color: #D2E48C;
+        filter: contrast(1.75);
+        font-weight: 700;
+        top: 250px;
+    }
+}
+
 @media only screen and (min-width: 601px) {
     .story-content {
         flex-direction: row-reverse;
@@ -332,12 +329,12 @@ color: #0C0C0C;
         text-align: left;
     }
 
-    .story-image {
+    .story-image, .team-image  {
         margin-right: 20px;
         margin-bottom: 0;
     }
 
-    .story-text {
+    .story-text, .team-text {
         margin-left: 20px;
     }
 
@@ -346,15 +343,6 @@ color: #0C0C0C;
         align-items: center;
         justify-content: center;
         text-align: left;
-    }
-
-    .team-image {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-
-    .team-text {
-        margin-left: 20px;
     }
 }
 
@@ -378,19 +366,6 @@ color: #0C0C0C;
         width: 80%;
     }
 
-    .header {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-    }
-
-    .napslogo img {
-        width: 70%;
-    }
-
-    .main-content {
-        align-items: center;
-    }
-
     .container img {
         top: 0;
     }
@@ -409,10 +384,6 @@ color: #0C0C0C;
         padding: 10px;
     }
 
-    .about-content h1 {
-        font-size: 20px; 
-    }
-
     .about-section h2 {
         font-size: 18px; 
     }
@@ -422,12 +393,10 @@ color: #0C0C0C;
     }
 
     .story-image, .team-image {
-        margin: 0;
         margin-bottom: 50px;
     }
 
     .story-text {
         text-align: justify;
-        margin-top: 20px;
     }
 }
