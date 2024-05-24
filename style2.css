@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    width: 60%; /* Adjusted width to make it rectangular */
+    height: 300px; /* Set a fixed height to achieve a rectangular shape */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative; /* For positioning the title */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%; /* Adjust height to create a rectangular aspect */
+    object-fit: cover;
+   
+}
+
+
+#arrow-right{
+    
+   float: right;
+    position: absolute;
+    top: 25%;
+   right: 2%;
+    font-weight: 100;
+    color: #E17846;
+    font-size: 185%;
+   
+}
+
+.card #card-title{
+    letter-spacing: -1.3px;
+    padding-left: 5%;
+    width: 120%;
+    padding-right: 80px;
+    color: #E17846;
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.card-container {
+    position: absolute;
+    top: 48%;
+    letter-spacing: 5;
+
+    background-color: white;
+    border-radius:  50px;
+    padding: 0.5%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card-content {
+    padding: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 40%; /* Adjusted height to fit within the rectangular card */
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        height: auto; /* Adjusted to auto for responsive design */
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .card-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card #card-title{
+        letter-spacing: -1.3px;
+        padding-left: 5%;
+        width: 200%;
+        padding-right: 50%;
+        color: #E17846;
+        font-size: 120%;
+    }
+
+    #arrow-right{
+    
+        float: right;
+         position: absolute;
+         top: 27%;
+        right: 7%;
+         font-weight: 900;
+         color: #E17846;
+        
+     }
+
+     .card-container {
+        position: absolute;
+        top: 48%;
+        letter-spacing: 5;
+        width: 90%;
+        background-color: white;
+        border-radius:  50px;
+        padding: 0.5%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+  a {
+   
+  }
+}
